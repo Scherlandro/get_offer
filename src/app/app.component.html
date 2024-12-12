@@ -1,0 +1,194 @@
+
+<header>
+  <nav>
+    <mat-icon>home</mat-icon>
+    <a mat-button="" routerLinkActive="active" [routerLink]="['header']">
+      <span class="mat-button-wrapper ">home</span></a>
+    <span></span>
+
+    <mat-icon>event</mat-icon>
+    <a mat-button="" routerLinkActive="active" [routerLink]="['calendar']">
+      <span class="mat-button-wrapper ">Calendar Scheduler</span></a>
+  <span></span>
+
+    <mat-icon>people</mat-icon>
+    <a mat-button="" routerLinkActive="active" [routerLink]="['users']">
+      <span class="mat-button-wrapper ">Users</span></a>
+    <span></span>
+
+    <mat-icon>works</mat-icon>
+    <a class="card" target="_blank" rel="noopener" mat-button=""
+       href="http://scherlandro.blogspot.com/" >
+      <span class="mat-button-wrapper ">My Blog</span></a>
+
+  </nav>
+</header>
+
+
+<body>
+<mat-card class="mat-card-body">
+  <router-outlet></router-outlet>
+
+  <div class="container">
+    <header>
+      <h1>Lista de Produtos</h1>
+    </header>
+    <main>
+      <section>
+        <div *ngIf="!selectedProduct">
+          <div class="card" *ngFor="let product of products">
+            <img [src]="product.image" alt="{{ product.name }}" />
+            <div class="card-content">
+              <h3>{{ product.name }}</h3>
+              <p>{{ product.description }}</p>
+              <button (click)="selectProduct(product)">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="selectedProduct">
+          <app-product-detail [product]="selectedProduct" (back)="selectedProduct = null"></app-product-detail>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+</mat-card>
+</body>
+
+
+<!--
+
+<mat-toolbar class="mat-toobar">
+  <button mat-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Calendar
+  <ul>
+    <mat-icon>people</mat-icon>
+   &lt;!&ndash;    <a href="app-dialog-usuario">Register User</a> &ndash;&gt;
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+  <a routerLink="" class="brand-loop"> Register User </a>
+      <ul id="nav-mobile" class="rigth hide-on-med-and-down"></ul>
+      <li routerLink="active"> <a  routerLink="app-users">Users</a></li>
+
+    </div>
+  </nav>
+
+</mat-toolbar>
+
+<mat-sidenav-container class="nav">
+  <mat-sidenav #sidenav  mode="side" opened>
+    <button class="buton-create"
+            (click)="openDialogo(eventControl.value)"  >
+      <mat-icon>add_to_photos</mat-icon>
+      Create
+    </button>
+
+    <mat-card class="card-calendar" >
+
+      <mat-calendar class="calendar-card"
+                    [(selected)]="selected"
+                    (click)="getDay()">
+      </mat-calendar>
+
+      <button class="buton-search"
+              (click)=" openSearchUser(eventControl.value)"  >
+        <mat-icon>people</mat-icon>
+        Search for people
+      </button>
+    </mat-card>
+
+  </mat-sidenav>
+  <mat-drawer-container   >
+    <mat-drawer mode="side" opened  >
+
+      <br><br><br><br>
+      <br >12 AM<br>
+      <br >1 AM<br>
+      <br>2 AM<br>
+      <br>3 AM<br>
+      <br>4 AM<br>
+      <br>5 AM<br>
+      <br>6 AM<br>
+      <br>7 AM<br>
+      <br>8 AM<br>
+      <br>9 AM<br>
+      <br>10 AM<br>
+      <br>11 AM<br>
+      <br>12 PM<br>
+      <br>1 PM<br>
+      <br>2 PM<br>
+      <br>3 PM<br>
+      <br>4 PM<br>
+      <br>5 PM<br>
+      <br>6 PM<br>
+      <br>7 PM<br>
+      <br>8 PM<br>
+      <br>9 PM<br>
+      <br>10 PM<br>
+      <br>11 PM<br>
+
+    </mat-drawer>
+
+    <mat-drawer-content  >
+
+      <mat-tab-group   >
+        <mat-tab
+          class="buton-day"
+          [label]="resultDate">
+          &lt;!&ndash;  [label]="tab"   *ngFor="let tab of lotsOfTabs">  &ndash;&gt;
+          <button
+            class="buton-day"
+          > {{resultDate}}
+          </button>
+
+          <mat-table
+            #table
+            [dataSource]="hourly"
+            cdkDropList
+            (cdkDropListDropped)="dropTable($event)"
+            cdkDropListData="dataSource"
+            [cdkDropListDisabled]="dragDisabled"
+          >
+            <ng-container matColumnDef="id_event" sticky  >
+              <mat-header-cell *matHeaderCellDef  class="mat-row" > ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"  >
+                <mat-icon class="dragCursor" (mousedown)="dragDisabled = false;" ></mat-icon >
+                <span>{{element.id_event}}</span>
+              </mat-cell>
+            </ng-container>
+            <mat-row   *matRowDef="let row; columns: displayedColumns;"  cdkDrag
+                       [cdkDragData]="row"></mat-row>
+          </mat-table>
+
+
+        </mat-tab>
+      </mat-tab-group>
+
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+</mat-sidenav-container>
+&lt;!&ndash; Footer &ndash;&gt;
+<footer  class="footerApp"  >
+  <div class="card-container">
+    <a class="card" target="_blank" rel="noopener" href="https://scherlandro.blogspot.com/">
+      <span>Scherlandro </span>
+    </a>
+  </div>
+</footer>
+
+
+
+
+-->

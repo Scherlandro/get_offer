@@ -1,0 +1,13 @@
+.mat-button-cad{
+  width:20%;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 50%;
+}
+.table-user {
+  width: 90%;
+}
+td, th {
+  width: 100%;
+}

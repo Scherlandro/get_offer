@@ -1,0 +1,164 @@
+
+.mat-toobar{
+  border-radius: 5px;
+  border-color:  gray;
+  height: 70px;
+}
+.nav{
+  background: white;
+  border: transparent;
+  box-shadow: white;
+}
+
+
+.card-calendar{
+  align-content: center;
+  align-items: center;
+  width: 350px;
+}
+.calendar-card {
+  align-content: center;
+  align-items: center;
+  top: 50%;
+  box-sizing: border-box;
+  max-width: 300px;
+  width: 100%;
+  border-color:  white;
+  color: black;
+}
+
+.buton-create {
+  border-radius: 30px;
+  color: lightslategray;
+  background: white;
+  border-color:  lightgray;
+  height: 60px;
+  width: 150px;
+}
+
+.buton-search {
+  border-radius: 5px;
+  color: #565a66;
+  background: #e7e6e6;
+  border: transparent;
+  box-shadow: #e7e6e6;
+  height: 35px;
+  width: 250px;
+}
+.vl {
+  border-left: 2px solid black;
+  height: 100%;
+  position: absolute;
+  left: 15%;
+  margin-left: -2px;
+  top: 0;
+}
+
+.table-uniq-col {
+  overflow-y: hidden;
+}
+
+.tab-day{
+  border-radius: 5px;
+  color: lightslategray;
+  background: lightgray;
+  border-color:  lightgray;
+  height: 40px;
+  width: 168px;
+}
+
+.buton-day {
+  border-radius: 50%;
+  color: #edeeef;
+  background: dodgerblue;
+  border-color: dodgerblue;
+  height: 60px;
+  width: 60px;
+}
+
+
+.table-hours{
+  border-radius: 5px;
+  height: 600px;
+  width: 300px;
+}
+
+.footerApp {
+  text-align-last: center;
+  display: block;
+  width: 100%;
+  height: 10%;
+  background: #ece5e5;
+}
+.drag-drop-table {
+  background: white;
+  display: block;
+  padding: 0px 0px;
+  font-size: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mat-table-drop {
+  padding: 0px;
+  text-align: center;
+}
+.mat-row {
+  font-weight: bold;
+  padding: 0px;
+  height: 8px;
+}
+
+/*
+
+.drag-drop-container {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+*/
+.drag-drop-list {
+  border: solid 1px #ccc;
+  min-height: 30px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
+.drag-drop-box {
+  padding: 5px 5px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.drag-drop-list.cdk-drop-list-dragging .drag-drop-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+

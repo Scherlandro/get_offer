@@ -1,0 +1,6 @@
+<div class="product-detail">
+  <button (click)="back.emit()">Voltar</button>
+  <h2>{{ product.name }}</h2>
+  <img [src]="product.image" alt="{{ product.name }}" />
+  <p>{{ product.description }}</p>
+</div>

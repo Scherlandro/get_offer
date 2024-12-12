@@ -1,0 +1,58 @@
+<label *ngIf="!isChange" mat-dialog-title>Add Event</label>
+<label *ngIf="isChange" mat-dialog-title>Edit Event</label>
+
+<div mat-dialog-content >
+
+   <fieldset class="fielset-ev">
+    <label class="label-dialog-ev" >Cod Event</label>
+    <input *ngIf="isChange" matInput [(ngModel)]="iEvents.id_event"
+           placeholder="Cod Event" class="input-slw-ev" type="text">
+   </fieldset>
+
+  <fieldset class="fielset-ev">
+    <mat-label class="label-dialog-ev">Title</mat-label>
+    <input matInput [(ngModel)]="iEvents.title"
+           placeholder="Title" class="input-dialog-ev"  type="text">
+  </fieldset>
+
+  <fieldset class="fielset-ev">
+    <mat-label class="label-dialog-ev">Participant</mat-label>
+    <input matInput [(ngModel)]="iEvents.participant"
+           placeholder="Participant" class="input-dialog-ev"  type="text">
+  </fieldset>
+
+  <fieldset class="fielset-ev">
+    <mat-label class="label-dialog-ev">Date</mat-label>
+    <input matInput [(ngModel)]="iEvents.data_day"
+           placeholder="Date" class="input-dialog-ev"  type="date">
+  </fieldset>
+
+  <fieldset class="fielset-ev">
+    <mat-label class="label-dialog-ev">Description</mat-label>
+    <input matInput [(ngModel)]="iEvents.description"
+           placeholder="Description" class="input-dialog-ev"  type="text">
+  </fieldset>
+
+<div class="body-event">
+  <fieldset class="fielset-group-ev">
+    <label class="label-dialog-ev" >Start</label>
+    <input matInput [(ngModel)]="iEvents.begin"
+           placeholder="Start" class="input-slw-ev" type="time">
+  </fieldset>
+
+  <fieldset class="fielset-group-ev">
+    <label class="label-dialog-ev">End</label>
+    <input matInput [(ngModel)]="iEvents.finished"
+           placeholder="End" class="input-slw-ev" type="time">
+  </fieldset>
+</div>
+  <span>
+
+  <button mat-raised-button *ngIf="!isChange" [mat-dialog-close]="iEvents" cdkFocusInitial >Create</button>
+  <button mat-button *ngIf="isChange" [mat-dialog-close]="iEvents" cdkFocusInitial >Edit</button>
+  <button mat-raised-button (click)="onCancel()">Cancel</button>
+ </span>
+
+
+</div>
+
